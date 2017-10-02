@@ -10,10 +10,11 @@ tags:
   - R
 ---
 Shown here is how to create a histogram.
+
 ```{r}
 library(sqldf)
 library(lahman)
-library(ggplot)
+library(ggplot2)
 
 query<-"SELECT weight
 FROM Master"
