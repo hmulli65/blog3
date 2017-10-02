@@ -3,9 +3,10 @@ title: Scatter plot
 author: Haley
 date: '2017-09-27'
 slug: scatter-plot
-categories: []
-tags: []
+categories: [R,Visualization]
+tags: [R]
 ---
+Shown here is how to create a scatter plot using R.
 
 ```{r warning=FALSE, message=FALSE}
 library(Lahman)
