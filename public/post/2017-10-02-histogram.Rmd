@@ -1,0 +1,27 @@
+---
+title: Histogram
+author: Haley
+date: '2017-10-02'
+slug: histogram
+categories:
+  - R
+  - Visualization
+tags:
+  - R
+---
+Shown here is how to create a histogram.
+```{r}
+library(sqldf)
+library(lahman)
+library(ggplot)
+
+query<-"SELECT weight
+FROM Master"
+result<-sqldf(query)
+
+ggplot()+
+  geom_histogram(data=result,aes(x=weight),color="blue",fill="white",bins=50)+
+  ggtitle("Body-Weight Distribution for Baseball Players")
+  
+```
+
