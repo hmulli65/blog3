@@ -1,0 +1,33 @@
+---
+title: Time Series
+author: Haley
+date: '2017-10-16'
+slug: time-series
+categories:
+  - R
+  - Visualization
+tags:
+  - R
+---
+
+```{r}
+library(Lahman)
+library(sqldf)
+library(ggplot2)
+
+query<-"SELECT yearID,HR
+FROM Batting
+WHERE playerID='ruthba01'"
+
+result<-sqldf(query)
+
+#Visualizing the data------------------------------------------
+
+ggplot()+
+  geom_point(data=result,aes(x=yearID,y=HR))+
+  geom_line(data=result,aes(x=yearID,y=HR))+
+  ggtitle("Ruth's Homerun Totals Through the Years")
+
+
+```
+
